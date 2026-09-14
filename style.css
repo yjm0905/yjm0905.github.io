@@ -1,1 +1,375 @@
-:root{--ink:#202124;--muted:#686b70;--line:#e6e7e9;--accent:#2e5d9f;--paper:#fff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.65}.container{max-width:900px;margin:0 auto;padding-left:28px;padding-right:28px}.site-header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);z-index:2}.nav{height:66px;display:flex;align-items:center;justify-content:space-between}.name{font-weight:600;color:var(--ink);text-decoration:none}.nav nav{display:flex;gap:24px}.nav nav a,.links a,.section a,.contact a{color:var(--accent);text-decoration:none}.nav nav a{color:var(--muted);font-size:.9rem}.nav nav a:hover,.section a:hover,.links a:hover{ text-decoration:underline}.intro{display:grid;grid-template-columns:1fr 150px;gap:55px;padding:92px 0 76px;align-items:center}.intro h1{font-family:Georgia,serif;font-size:3.3rem;line-height:1.1;font-weight:400;margin:0 0 10px}.role{font-size:1.2rem;margin:0 0 22px;color:var(--muted)}.lead{font-size:1.1rem;line-height:1.75;max-width:650px;color:#3d4045}.links{margin-top:24px;color:var(--muted)}.links span{margin:0 10px}.portrait{width:150px;height:150px;border-radius:50%;background:#eef1f5;color:#7a8593;display:grid;place-items:center;font:500 2.4rem Georgia,serif}.section{border-top:1px solid var(--line);padding:48px 0}.section h2{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 24px}.section>p{max-width:690px}.topics{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.topics div{border-top:2px solid var(--ink);padding-top:12px;display:flex;flex-direction:column;gap:6px}.topics strong{font-size:.78rem;color:var(--muted);font-weight:400}.topics span{font-size:1.05rem}.item{display:grid;grid-template-columns:80px 1fr;gap:20px;padding:20px 0;border-top:1px solid var(--line)}.item:first-of-type{border-top:0;padding-top:0}.year,.meta,.small{color:var(--muted);font-size:.9rem}.item h3,.project-grid h3{font-family:Georgia,serif;font-weight:400;font-size:1.15rem;margin:0 0 5px}.item p{margin:0 0 8px}.sep{color:#aaa;margin:0 8px}.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.project-grid article{border:1px solid var(--line);padding:22px}.project-grid p{color:var(--muted);font-size:.95rem}.contact{padding-bottom:90px}.contact p{margin:7px 0}footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:.85rem}@media(max-width:650px){.nav nav{gap:10px}.nav nav a{font-size:.78rem}.intro{grid-template-columns:1fr;padding:65px 0}.portrait{order:-1;width:92px;height:92px;font-size:1.6rem}.intro h1{font-size:2.6rem}.topics,.project-grid{grid-template-columns:1fr}.item{grid-template-columns:58px 1fr}}
+:root {
+  color-scheme: light;
+  --heading: #800000;
+  --link: #224b8d;
+}
+
+html {
+  scroll-padding-top: 16px;
+}
+
+body {
+  margin: 0;
+  background: white;
+  color: #000000;
+  font-family: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
+  font-size: 17.6px;
+  text-align: center;
+}
+
+#layout-content {
+  width: calc(100% - 35.2px);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 17.6px 26.4px;
+  text-align: left;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+a:hover {
+  text-decoration: underline dotted gray;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  z-index: 1;
+  padding: 8px 12px;
+  transform: translateY(-160%);
+  background: white;
+  border: 1px solid var(--link);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+#toptitle {
+  padding-bottom: 3.52px;
+  margin-bottom: 26.4px;
+  border-bottom: 3px double gray;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+#toptitle h1 {
+  margin: 13.2px 0 0;
+  padding: 0 0 2.9px;
+  color: var(--heading);
+  font-size: 29.04px;
+}
+
+h2 {
+  margin: 0.7em 0 0.3em;
+  padding: 0.8em 0 0.2em;
+  border-bottom: 1px solid #aaaaaa;
+  color: var(--heading);
+  font-size: 22px;
+}
+
+h3 {
+  margin: 0.7em 0 0.3em;
+  padding: 0.5em 0 0.2em;
+  font-size: 19.36px;
+}
+
+h2 + h3 {
+  padding-top: 0.2em;
+}
+
+p {
+  margin: 0 0 0.8em;
+  padding: 0;
+  line-height: 1.3;
+}
+
+.imgtable {
+  max-width: 100%;
+  border: 0;
+  border-collapse: collapse;
+}
+
+.imgtable td {
+  padding: 2.2px 8.8px;
+  border: 0;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.imgtable .portrait-column {
+  width: 176px;
+}
+
+.portrait-link,
+.logo-link {
+  display: inline-block;
+  line-height: 0;
+}
+
+.portrait {
+  width: 154px;
+  height: 209px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-heading,
+.profile-affiliation {
+  margin-bottom: 25px;
+}
+
+.chinese-name,
+.chinese-role {
+  font-family: STKaiti, KaiTi, "Kaiti SC", serif;
+  white-space: nowrap;
+}
+
+.chinese-name {
+  font-size: 52.8px;
+}
+
+.chinese-role {
+  margin-left: 8px;
+  font-size: 26.4px;
+}
+
+.english-name {
+  font-size: 26.4px;
+}
+
+.profile-contact {
+  margin-bottom: 14.08px;
+}
+
+.imgtable .logo-column {
+  width: 275px;
+  text-align: center;
+}
+
+.institution-logo {
+  width: 198px;
+  height: 198px;
+  object-fit: contain;
+}
+
+img {
+  border: 0;
+}
+
+.text {
+  margin: 8.8px 0;
+  text-align: justify;
+}
+
+.text p {
+  margin-bottom: 16.5px;
+  line-height: 1.5;
+}
+
+ul {
+  margin: 0.2em 0 0.8em;
+  padding: 0 0 0 44px;
+  list-style-type: square;
+  line-height: 1.5;
+}
+
+.education-list li {
+  margin-bottom: 8px;
+}
+
+.publication-list li {
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.publication-venue {
+  color: #cc0000;
+}
+
+.publication-details {
+  color: rgb(89, 96, 190);
+}
+
+.page-footer {
+  margin-top: 26.4px;
+}
+
+@media (min-width: 1280px) {
+  #layout-content {
+    position: relative;
+    left: 5vw;
+  }
+}
+
+@media (max-width: 960px) {
+  .imgtable,
+  .imgtable tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .imgtable tr {
+    display: grid;
+    grid-template-columns: 154px minmax(0, 1fr);
+    gap: 20px 28px;
+  }
+
+  .imgtable td {
+    display: block;
+    width: auto;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .imgtable .portrait-column {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: auto;
+    align-self: start;
+  }
+
+  .profile-column {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .imgtable .logo-column {
+    grid-column: 2;
+    grid-row: 2;
+    width: auto;
+    text-align: left;
+  }
+
+  .institution-logo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .chinese-name {
+    font-size: 46px;
+  }
+
+  .chinese-role {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  #layout-content {
+    width: auto;
+    padding: 0 18px 24px;
+  }
+
+  #toptitle h1 {
+    font-size: 25px;
+    line-height: 1.25;
+  }
+
+  .imgtable tr {
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 20px 16px;
+  }
+
+  .imgtable .portrait-column {
+    grid-row: 1;
+  }
+
+  .portrait {
+    width: 110px;
+    height: 149px;
+  }
+
+  .profile-column {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .imgtable .logo-column {
+    grid-row: 1;
+    align-self: center;
+    text-align: center;
+  }
+
+  .chinese-name {
+    font-size: 40px;
+  }
+
+  .chinese-role {
+    font-size: 20px;
+  }
+
+  .english-name {
+    font-size: 24px;
+  }
+
+  .profile-heading,
+  .profile-affiliation {
+    margin-bottom: 18px;
+  }
+
+  h2 {
+    font-size: 21px;
+    line-height: 1.25;
+  }
+
+  .heading-note {
+    font-size: 16px;
+  }
+
+  .text {
+    text-align: left;
+  }
+
+  ul {
+    padding-left: 25px;
+  }
+}
+
+@media print {
+  body {
+    font-size: 11pt;
+  }
+
+  #layout-content {
+    left: 0;
+    width: auto;
+    max-width: none;
+    padding: 0;
+  }
+
+  .skip-link {
+    display: none;
+  }
+
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  .imgtable,
+  .publication-list li,
+  .education-list li {
+    break-inside: avoid;
+  }
+}
